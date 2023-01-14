@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Boite a feur</title>
+  <style>
+  <link href= rel="stylesheet" "https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap">
+    /* Appliquez la police à tout le contenu */
+    * {
+      font-family: 'Poppins', sans-serif;
+    }
+    /* Centrez tout sur la page */
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 80vh;
+	  font-family: 'Poppins', sans-serif;
+    }
+    /* Appliquez un style simple en noir et blanc */
+    * {
+      color: black;
+      background-color: white;
+    }
+    /* Style pour le titre */
+    h1 {
+      font-size: 50px;
+      text-align: center;
+	  height: 4vh;
+	  font-family: 'Poppins', sans-serif;
+    }
+    /* Style pour les boutons */
+    button {
+      font-size: 24px;
+      padding: 10px 20px;
+      margin: 20px 0;
+	  font-family: 'Poppins', sans-serif;
+    }
+    /* Style pour le bouton de sélection */
+    select {
+      font-size: 24px;
+      padding: 10px 20px;
+      margin: 20px 0;
+	  font-family: 'Poppins', sans-serif;
+    }
+	
+	button {
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:active {
+  background-color: black;
+  color: white;
+}
+  </style>
+</head>
+<body>
+  <h1>Boite a <strong>feur</h1>
+  <select id="sound-select">
+    <option value="Feur1.wav">Feur 1</option>
+    <option value="Feur2.wav">Feur 2</option>
+    <option value="Feur3.wav">Feur 3</option>
+	<option value="Feur3.wav">Feur 4</option>
+	<option value="Feur3.wav">Feur 5</option>
+	<option value="Feur3.wav">Feur 6</option>
+	<option value="Feur3.wav">Feur 7</option>
+	<option value="Feur3.wav">Feur 8</option>
+	
+  </select>
+  <button id="play-button">Jouer un feur</button>
+  <script>
+    // Référencez les boutons
+    const playButton = document.getElementById('play-button');
+    const soundSelect = document.getElementById('sound-select');
+
+    // Ajoutez un événement click pour jouer le son sélectionné
+    playButton.addEventListener('click', function() {
+      const audio = new Audio(soundSelect.value);
+      audio.play();
+    });
+	
+  </script>
+</body>
+</html>
