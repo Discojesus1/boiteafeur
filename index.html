@@ -121,13 +121,24 @@ button:active {
     const playButton = document.getElementById('play-button');
     const soundSelect = document.getElementById('sound-select');
 
+    // Variables to track the order of audio played
+    var audioPlayed = [];
+    var audioOrder = ["Tim 1.wav", "Tim 2.wav", "Tim 3.wav"];
+
     // Ajoutez un événement click pour jouer le son sélectionné
     playButton.addEventListener('click', function() {
       const audio = new Audio(soundSelect.value);
       audio.play();
+      audioPlayed.push(soundSelect.value);
+
+      // Check if the correct order of audio is played in the last three played sounds
+      if (audioPlayed.length >= 3 && JSON.stringify(audioPlayed.slice(-3)) === JSON.stringify(audioOrder)) {
+        // Redirect to another website
+        window.location.href = "http://www.example.com";
+      }
     });
-	
   </script>
+
 	<h3>Fait avec amour par toute la team</h3>
 </body>
 </html>
