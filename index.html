@@ -123,7 +123,7 @@ button:active {
 
     // Variables to track the order of audio played
     var audioPlayed = [];
-    var audioOrder = ["Tim 1.wav", "Tim 2.wav", "Tim 3.wav"];
+    var audioOrder = ["Tim 3.wav", "Tim 1.wav", "Tim 2.wav"];
 
     // Ajoutez un événement click pour jouer le son sélectionné
     playButton.addEventListener('click', function() {
@@ -135,7 +135,7 @@ button:active {
       if (audioPlayed.length >= 3 && JSON.stringify(audioPlayed.slice(-3)) === JSON.stringify(audioOrder)) {
         // Add a delay before redirecting the user
         setTimeout(function() {
-          window.location.href = "http://www.example.com";
+          window.location.href = "https://discojesus1.github.io/Message/";
         }, 1000);
       }
     });
