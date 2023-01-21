@@ -133,8 +133,10 @@ button:active {
 
       // Check if the correct order of audio is played in the last three played sounds
       if (audioPlayed.length >= 3 && JSON.stringify(audioPlayed.slice(-3)) === JSON.stringify(audioOrder)) {
-        // Redirect to another website
-        window.location.href = "http://www.example.com";
+        // Add a delay before redirecting the user
+        setTimeout(function() {
+          window.location.href = "http://www.example.com";
+        }, 1000);
       }
     });
   </script>
